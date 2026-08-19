@@ -26,7 +26,7 @@ function Home() {
   const fetchMemories = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5001/api/memories"
+        `${import.meta.env.VITE_API_URL}/api/memories`
       );
 
       if (response.data.success) {

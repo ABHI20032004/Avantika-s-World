@@ -49,11 +49,11 @@ function Gallery() {
       setLoading(true);
 
   const response = await axios.get(
-  "http://localhost:5001/api/memories",
-  {
-    withCredentials: true,
-  }
-);
+    `${import.meta.env.VITE_API_URL}/api/memories`,
+    {
+      withCredentials: true,
+    }
+  );
 
       if (response.data.success) {
         setMemories(response.data.memories);

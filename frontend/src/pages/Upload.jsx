@@ -58,7 +58,7 @@ function Upload() {
 
 
       const response = await axios.post(
-        "http://localhost:5001/api/memories",
+        `${import.meta.env.VITE_API_URL}/api/memories`,
         formData,
         {
           withCredentials: true,

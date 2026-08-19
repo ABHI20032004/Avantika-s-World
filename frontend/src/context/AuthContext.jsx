@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
     const checkAuth = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5001/api/auth/me",
+          `${import.meta.env.VITE_API_URL}/api/auth/me`,
           {
             withCredentials: true,
           }
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       await axios.post(
-        "http://localhost:5001/api/auth/logout",
+        `${import.meta.env.VITE_API_URL}/api/auth/logout`,
         {},
         {
           withCredentials: true,

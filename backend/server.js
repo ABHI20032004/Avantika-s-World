@@ -22,7 +22,7 @@ const allowedOrigins = [
   "http://localhost:5173",
 
   // Add your Vercel frontend URL here later
-  // "https://your-memory-vault.vercel.app",
+   "https://avantika-s-world.vercel.app/",
 ];
 
 app.use(

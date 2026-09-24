@@ -403,10 +403,10 @@ function About() {
                 <img
                   src={GIRL.image}
                   alt={GIRL.name}
-                  className="relative z-[2] h-[330px] w-full object-cover"
+                  className="relative z-[2] h-[380px] w-full object-cover"
                 />
               ) : (
-                <div className="relative z-[2] flex h-[330px] items-center justify-center">
+                <div className="relative z-[2] flex h-[380px] items-center justify-center">
 
                   <motion.div
                     animate={{
@@ -694,7 +694,7 @@ function About() {
 
             {/* Children */}
 
-            <div className="mt-7 grid grid-cols-2 gap-4">
+            <div className="mt-7 grid grid-cols-2 gap-4 ">
 
               {FAMILY.slice(
                 2
@@ -1019,70 +1019,31 @@ function SectionHeading({
 |--------------------------------------------------------------------------
 */
 
-function FamilyCard({
-  person,
-  index,
-  onClick,
-}) {
-  return (
-    <motion.button
-      initial={{
-        opacity: 0,
-        y: 20,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-      }}
-      transition={{
-        delay: index * 0.08,
-      }}
-      whileTap={{
-        scale: 0.95,
-      }}
-      onClick={onClick}
-      className={`relative overflow-hidden rounded-[28px] ${person.color} p-4 text-left shadow-sm`}
-    >
+function FamilyCard(
+  { person, index, onClick, })
+   { return (
+     <motion.button initial={{ opacity: 0, y: 20, }}
+      whileInView={{ opacity: 1, y: 0, }}
+       viewport={{ once: true, }}
+        transition={{ delay: index * 0.08, }}
+         whileTap={{ scale: 0.95, }} onClick={onClick}
+          className="relative h-64 w-full overflow-hidden rounded-[28px] text-left shadow-lg" >
+             {/* Full Card Image */} {person.image ? (
+               <img src={person.image} alt={person.relation}
+                className="absolute inset-0 h-full w-full object-cover" /> )
+                 : ( <div className={`absolute inset-0 ${person.color}
+                   flex items-center justify-center text-6xl`} >
+                     {person.emoji} </div> )} {/* Dark gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" /> {/* Arrow */} 
+                      <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm"> 
+                      <ChevronRight size={16} className="text-black/50" /> 
+                      </div> {/* Name + Relation */} 
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white"> 
+                        <p className="text-base font-black drop-shadow-md"> {person.name || person.relation} 
+                          </p> <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-white/80"> {person.relation} </p> 
+                          </div> 
+                          </motion.button> ); }
 
-      <div className="flex items-start justify-between">
-
-        <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-[20px] bg-white/60 text-3xl">
-
-          {person.image ? (
-            <img
-              src={person.image}
-              alt={person.name}
-              className="h-full w-full object-cover"
-            />
-          ) : (
-            person.emoji
-          )}
-
-        </div>
-
-
-        <ChevronRight
-          size={16}
-          className="text-black/30"
-        />
-
-      </div>
-
-
-      <p className="mt-4 text-sm font-black">
-        {person.name}
-      </p>
-
-      <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-black/40">
-        {person.relation}
-      </p>
-
-    </motion.button>
-  );
-}
 
 
 /*

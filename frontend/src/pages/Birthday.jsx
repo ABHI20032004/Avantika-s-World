@@ -36,7 +36,7 @@ const UPCOMING_BIRTHDAY = {
 
   date: "2026-09-24T19:30:00",
 
-  image: "/birthday.png",
+  image: "/about.png",
 
 
   message:
@@ -418,7 +418,7 @@ function Birthdays() {
                   alt={
                     UPCOMING_BIRTHDAY.name
                   }
-                  className="relative z-[2] mx-auto h-[450px] w-full object-cover"
+                  className="relative z-[2] mx-auto h-[480px] w-full object-cover"
                 />
               ) : (
                 <div className="relative z-[2] flex h-[350px] items-center justify-center">

@@ -22,7 +22,7 @@ const GIRL = {
   name: "Avantika Shree",
   nickname: "Our Little Star",
 
-  image: "",
+  image: "/about.png",
 
   birthday: "24 September 2025",
 
@@ -81,7 +81,7 @@ const FAMILY = [
     id : 3,
     relation: "Mama",
     emoji: "👦🏻",
-    image: "",
+    image: "/mama.png",
     color: "bg-[#E7DBFF]",
     message:
       "Her partner in laughter, adventures and occasional mischief. 😄",

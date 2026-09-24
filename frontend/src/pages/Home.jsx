@@ -319,10 +319,10 @@ function Home() {
 
               {<div className="relative h-[235px] overflow-hidden rounded-[16px] bg-[#FFE8DC]">
 
-                {memories[0]?.mediaType === "image" ? (
+                {memories[21]?.mediaType === "image" ? (
                   <img
-                    src={memories[0].mediaUrl}
-                    alt={memories[0].title || "Memory"}
+                    src={memories[21].mediaUrl}
+                    alt={memories[21].title || "Memory"}
                     className="h-full w-full object-cover"
                   />
                 ) : memories[0]?.mediaType === "video" ? (
@@ -379,7 +379,7 @@ function Home() {
               <div className="px-2 pt-3">
 
                 <p className="truncate font-black">
-                  {memories[0]?.title ||
+                  {memories[10]?.title ||
                     "A beautiful memory"}
                 </p>
 

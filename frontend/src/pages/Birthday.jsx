@@ -36,7 +36,8 @@ const UPCOMING_BIRTHDAY = {
 
   date: "2026-09-24T19:30:00",
 
-  image: "",
+  image: "/birthday.png",
+
 
   message:
     "The world became a little brighter on the day you arrived. 💕",
@@ -417,10 +418,10 @@ function Birthdays() {
                   alt={
                     UPCOMING_BIRTHDAY.name
                   }
-                  className="relative z-[2] mx-auto h-[280px] w-full object-cover"
+                  className="relative z-[2] mx-auto h-[450px] w-full object-cover"
                 />
               ) : (
-                <div className="relative z-[2] flex h-[280px] items-center justify-center">
+                <div className="relative z-[2] flex h-[350px] items-center justify-center">
 
                   <motion.div
                     animate={{
@@ -1070,7 +1071,7 @@ function CountdownBox({
       className={`relative overflow-hidden rounded-[22px] p-4 text-center ${
         highlight
           ? "bg-[#e4a96b]"
-          : "bg-white/30"
+          : "bg-white/10"
       }`}
     >
 

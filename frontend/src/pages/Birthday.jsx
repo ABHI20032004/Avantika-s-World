@@ -22,10 +22,10 @@ import axios from "axios";
 | The date must include the exact time.
 |
 | Example:
-| 2026-09-24T19:30:00
+| 2027-09-24T19:30:00
 |
 | This means:
-| 24 September 2026 at 7:30 PM
+| 24 September 2027 at 7:30 PM
 |
 */
 
@@ -34,7 +34,7 @@ const UPCOMING_BIRTHDAY = {
 
   nickname: "Our Little Star",
 
-  date: "2026-09-24T19:30:00",
+  date: "2027-09-24T19:30:00",
 
   image: "/about.png",
 
